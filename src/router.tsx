@@ -15,6 +15,7 @@ import {action as editarDisponibilidad} from './actions/editarDisponibilidadActi
 import {action as eliminarProducto} from './actions/eliminarProductoAction'
 import {action as editarProductoAction} from './actions/editarProductoAction';
 import {action as nuevoProductoAction} from './actions/crearProductoAction';
+import NoEncontrada from './views/404'
 
 
 
@@ -42,6 +43,9 @@ export const router = createBrowserRouter([
             },{
                 path: 'productos/:id/eliminar',
                 action: eliminarProducto
+            },{
+                path: '*',
+                element: <NoEncontrada/>
             }
         ]
     }
